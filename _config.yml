@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : "Gaurav Kandlikar"
 description              : "Landing page for the UCLA EEB Hacky Hours."
 url                      : "https://ucla-hacky-hours.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/"
 repository               : "UCLA-hacky-hours/ucla-hacky-hours.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
