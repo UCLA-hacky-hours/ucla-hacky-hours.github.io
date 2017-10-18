@@ -1,0 +1,5 @@
+---
+permalink: /
+---
+
+stuff and things
