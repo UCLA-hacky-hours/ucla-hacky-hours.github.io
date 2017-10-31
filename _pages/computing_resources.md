@@ -4,6 +4,8 @@ author_profile: false
 title: "Computing resources at UCLA"
 ---
 
+*Note: page under construction*
+
 ## Courses
 - [Biostats 203A](http://www.registrar.ucla.edu/Academics/Course-Descriptions/Course-Details?SA=BIOSTAT&funsel=3): Introduction to Data Management and Statistical Computing
 
