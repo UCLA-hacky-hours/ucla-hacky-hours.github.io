@@ -14,5 +14,5 @@ main:
     url: /computing_at_ucla
   - title: Blog/Weekly Resources
     url: /blog
-  # - title: EEB at UCLA
-  #  url: http://eeb.ucla.edu/
+  - title: EEB at UCLA
+    url: http://eeb.ucla.edu/
