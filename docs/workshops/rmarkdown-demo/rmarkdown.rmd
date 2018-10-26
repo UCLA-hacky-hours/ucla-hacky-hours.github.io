@@ -1,0 +1,176 @@
+---
+title: "Scientific writing with R Markdown"
+subtitle: "UCLA EEB Hacky Hours"
+author: "Gaurav Kandlikar"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{css, echo=FALSE}
+pre {
+  background: #D3D3D3;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+
+}
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+
+# But first...
+
+---
+class: inverse
+
+# Goals for hacky hour workshops
+
+--
+
+### Build a fun and supportive community for developing EEB-related computing skills
+
+--
+
+### Share relevant computing skills or tools-- from Bayesian statistics to computing ethics
+
+--
+
+.pull-left[
+![](https://gradeslam.org/blog_images/237/studying.gif)
+]
+
+--
+.pull-right[
+![](https://media.giphy.com/media/nAErqE3k2C3fy/giphy.gif)
+]
+---
+
+class: 
+
+```{r, echo = F}
+icon::fa("clock", size = 3) 
+```
+--
+
+.pull-left[
+
+
+
+### Hour 1: Workshop/demos
+
+*Tentative topics*<sup>1</sup>  
+- **Writing with R Markdown**   
+- Version control with Git/Github  
+- Visualizing data in `R`  
+- Working with "messy" data in `R`  
+- Base R: Functions, Loops, and Conditionals  
+
+*Future topics*
+- Advanced statistics statistics  
+- Spatial analyses
+- ...
+
+]
+
+--
+
+.pull-right[
+
+
+### Hour 2: Open time for coworking
+
+![](https://media.giphy.com/media/3peISTXJFTBZK/giphy.gif)
+]
+
+---
+
+class: center, middle
+
+background-image: url("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png")
+background-size: contain
+
+---
+
+## Markdown- a simple markup language
+
+```
+Markdown helps you generate documents with lots of **features** (section headers, figures, footnotes, ...) from simple, plain-text files.
+```
+Markdown helps you generate documents with lots of **features** (section headers, figures, footnotes, ...) from simple, plain-text files.
+
+<hr>
+
+--
+
+```
+Here's some *italicized text*
+```
+Here's some *italicized text*
+<hr>
+
+--
+
+```
+- Here's a list
+- Another item on the list
+```
+
+- Here's a list
+- Another item on the list
+
+<hr>
+
+--
+
+```
+[Here's a link to the UCLA EEB Website](https://www.eeb.ucla.edu/)
+```
+[Here's a link to the UCLA EEB Website](https://www.eeb.ucla.edu/)
+
+---
+
+### R Markdown allows you to tightly integrate your analyses with your writing
+
+---
+
+# RMarkdown is powerful 
+
+.pull-left[
+```
+--
+
+### Share relevant computing skills or tools-- from Bayesian statistics to computing ethics
+
+--
+
+.pull-left[
+![](https://gradeslam.org/blog_images/237/studying.gif)
+]
+
+--
+.pull-right[
+![](https://media.giphy.com/media/nAErqE3k2C3fy/giphy.gif)
+]
+---
+
+
+```
+]
+
+
+.pull-right[
+![](rmarkdown-demo/slideshow-screenshot.png)
+]
+---
+
+# RMarkdown is powerful
