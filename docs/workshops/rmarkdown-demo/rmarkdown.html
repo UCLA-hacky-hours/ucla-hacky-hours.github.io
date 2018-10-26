@@ -260,7 +260,7 @@ class: inverse
 
 ---
 
-## Parts of an R Markdown document
+## The three parts of an RMarkdown document
 
 ### 1. YAML head
 ```
@@ -280,26 +280,26 @@ output: html_document
   
   
   ```r
-  knitr::opts_chunk$set(echo = TRUE)
+  plot(pressure)
   ```
 
 ---
 
 ### 3. Markdown text
 
-```
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-```
+  ```
+  ## R Markdown
+  
+  This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
+  
+  When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+  ```
 
 &lt;hr&gt;
 
 --
 
-### 4. "Knit" document
+### When you are ready, "Knit" document
 
 ![](knit-button.png)
 
@@ -311,12 +311,17 @@ When you click the **Knit** button a document will be generated that includes bo
 background-image: url("https://bookdown.org/yihui/rmarkdown/images/cover.png")
 background-size: contain
 
+
+
+.pull-left[[link to book](https://bookdown.org/yihui/rmarkdown/r-code.html)]
+
 ---
 
-### Embedding `\(\LaTeX\)` in RMarkdown documents
+### Highly customizable documents with RMarkdown + `\(\LaTeX\)` 
 
+--
 
-Markdown gets you 90% of the way there. 
+If you are writing a very "feature-rich" document, markdown gets you 90% of the way there. 
 
 --
 
@@ -397,20 +402,20 @@ We found a strong correlation between panda size and bamboo demand (R = .85, p =
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; -0.2821122 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -0.3366350 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.0157088 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.7831108 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; -0.7280912 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -1.0086861 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.4391562 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.0615299 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 0.3428287 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.5485116 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9858963 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.7267350 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; -0.9032050 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.0562239 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0455192 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4487978 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -463,7 +468,7 @@ We found a strong correlation between panda size and bamboo demand (R = 0.815).
 
 ---
 
-## Key feature 1. Reference management
+## Key feature 2. Reference management
 
 Three-steps to managing references in RMarkdown:  
 
