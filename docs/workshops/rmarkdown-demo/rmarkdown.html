@@ -4,7 +4,7 @@
     <title>Scientific writing with R Markdown</title>
     <meta charset="utf-8">
     <meta name="author" content="Gaurav Kandlikar" />
-    <meta name="date" content="2018-10-25" />
+    <meta name="date" content="2018-10-26" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
@@ -16,9 +16,12 @@ class: center, middle, inverse, title-slide
 # Scientific writing with R Markdown
 ## UCLA EEB Hacky Hours
 ### Gaurav Kandlikar
-### 2018-10-25
+### 2018-10-26
 
 ---
+
+
+class: center, middle
 
 &lt;style type="text/css"&gt;
 pre {
@@ -33,7 +36,7 @@ pre {
 
 
 
-class: center, middle
+
 
 # But first...
 
@@ -83,7 +86,9 @@ class:
 *Future topics*
 - Advanced statistics statistics  
 - Spatial analyses
-- ...
+- ...   
+
+&lt;sup&gt;1&lt;/sup&gt;: Inspired by the [British Ecological Societies' Guide to Reproducible Code](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf)
 
 ]
 
@@ -126,12 +131,10 @@ Here's some *italicized text*
 --
 
 ```
-- Here's a list
-- Another item on the list
+### Here's a subsection heading
 ```
 
-- Here's a list
-- Another item on the list
+### Here's a subsection heading
 
 &lt;hr&gt;
 
@@ -142,13 +145,76 @@ Here's some *italicized text*
 ```
 [Here's a link to the UCLA EEB Website](https://www.eeb.ucla.edu/)
 
+.pull-right[
+[Check out this helpful cheatsheet for more options](https://www.markdownguide.org/cheat-sheet)
+]
+
 ---
 
-# Markdown is powerful 
+class: center,middle
+
+![](markdown-compilation.svg)
+
+
+
+---
+
+class: center, middle
+
+# R Markdown allows you to embed R code in markdown documents, promoting tight integration of analyses and writing
+
+---
+
+class: center, middle
+
+# R Markdown allows you to embed R code in markdown documents, promoting tight integration of analyses and ~~writing~~ thinking
+
+---
+
+class: center
+
+background-image: url("https://d33wubrfki0l68.cloudfront.net/c6964e233a57962f8bda1dd3e5b497a71218a9f6/9c068/lesson-images/how-3-output.png")
+background-size: contain
+
+---
+class: center
+
+background-image: url("rmarkdown-compilation.svg")
+background-size: contain
+
+---
+
+class: center,middle
+
+## RMarkdown is a powerful tool
+
+---
+background-image: url("rmd-homework.png")
+background-size: contain
+
+### RMarkdown for assignments
+
+---
+background-image: url("rmd-analysis-notebook.png")
+background-size: contain
+
+### RMarkdown for lab notebooks
+
+
+---
+
+### RMarkdown for Rmarkdown workshops 🤔
+
 
 .pull-left[
 ```
+class: inverse
+
+# Goals for hacky hour workshops
+
 --
+
+### Build a fun and supportive community for developing EEB-related computing skills
 
 ### Share relevant computing skills or tools-- from Bayesian statistics to computing ethics
 
@@ -170,11 +236,279 @@ Here's some *italicized text*
 
 
 .pull-right[
-![](rmarkdown-demo/slideshow-screenshot.png)
+![](slideshow-screenshot.png)
 ]
 ---
 
-# Markdown is powerful
+background-image: url("https://media1.tenor.com/images/b9312e397f43932bc50b2ec584d4ea42/tenor.gif?itemid=3835785")
+class: inverse
+---
+
+## Getting started
+
+1. Open RStudio and install the `rmarkdown` package
+
+```r
+* install.packages("rmarkdown")
+```
+
+--
+
+2. Create a new R Markdown file
+
+![](new-rmd-file.png)
+
+---
+
+## Parts of an R Markdown document
+
+### 1. YAML head
+```
+---
+title: "My First RMarkdown Document"
+author: "Gaurav Kandlikar"
+date: "October 26, 2018"
+output: html_document
+---
+```
+
+&lt;hr&gt; 
+
+--
+
+### 2. R Code chunk
+  
+  
+  ```r
+  knitr::opts_chunk$set(echo = TRUE)
+  ```
+
+---
+
+### 3. Markdown text
+
+```
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```
+
+&lt;hr&gt;
+
+--
+
+### 4. "Knit" document
+
+![](knit-button.png)
+
+--
+![](rmarkdown-compilation.svg)
+
+---
+
+background-image: url("https://bookdown.org/yihui/rmarkdown/images/cover.png")
+background-size: contain
+
+---
+
+### Embedding `\(\LaTeX\)` in RMarkdown documents
+
+
+Markdown gets you 90% of the way there. 
+
+--
+
+`\(\LaTeX\)` can do the rest.   
+
+--
+
+- Latex can help typset equations
+
+```
+$$\frac{\mathrm{d}N_i}{\mathrm{d}t} =  
+        r_i N_i\left(1-\frac{K_i-N_i}{K_i}\right)$$
+```
+
+`$$\frac{\mathrm{d}N_i}{\mathrm{d}t} = r_i N_i\left(1-\frac{K_i-N_i}{K_i}\right)$$`
+
+
+--
+
+- or manage bibliographies
+
+```
+Coexistence theory is fun! [@Chesson_2000]
+```
+
+Coexistence theory is fun! (Chesson 2000)
+
+---
+
+class: center, middle, inverse
+
+## Writing documents in RMarkdown isn't trivial...
+--
+
+### But it's worth learning.
+
+---
+
+class: center, middle
+
+# Three key features of RMarkdown for scientific writing
+--
+
+### 1. "In-line" R code
+### 2. Reference Management
+### 3. Custom Word templates
+
+---
+## Key feature 1. In-line R code 
+
+Consider a sentence like 
+
+&gt; We found a strong correlation between panda size and bamboo demand (R = .85, p = 0.002).
+
+How did it get to be?  
+
+--
+
+```
+We found a strong correlation between panda size and bamboo demand (R = .85, p = 0.002).
+```
+
+--
+
+### Let's take a closer look at the underlying analysis.
+
+---
+
+&gt; We found a strong correlation between panda size and bamboo demand (R = .85).
+
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Mass &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Bamboo &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; -0.2821122 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.3366350 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; -0.7280912 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.0086861 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 0.3428287 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.5485116 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; -0.9032050 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0562239 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+  
+--
+
+
+```r
+mass_bamboo_corr &lt;- cor.test(dat$Mass, dat$Bamboo); mass_bamboo_corr
+```
+
+```
+## 
+## 	Pearson's product-moment correlation
+## 
+## data:  dat$Mass and dat$Bamboo
+## t = 9.7444, df = 48, p-value = 5.872e-13
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.6941145 0.8911804
+## sample estimates:
+##   cor 
+*## 0.815
+```
+
+---
+
+![](pvalue-problems.png)
+
+---
+
+### Use "in-line R code" to avoid such errors 
+
+--
+
+  ```
+  We found a strong correlation between panda size and bamboo demand 
+  (R = ` r mass_bamboo_corr$estimate `).
+  ```
+--
+
+We found a strong correlation between panda size and bamboo demand (R = 0.815).
+
+
+--
+
+&lt;hr&gt;
+
+## Not just for avoiding errors!
+
+---
+
+## Key feature 1. Reference management
+
+Three-steps to managing references in RMarkdown:  
+
+--
+
+1. Add a `bibliography` file to the YAML chunk  
+
+--
+
+2. Populate the bibliography file with your references  
+
+--
+
+3. Add in-line citations using `@Reference_tag`  
+
+---
+
+## Key feature 3. Word templates
+
+
+Three steps to tolerable .Docx files:  
+
+--
+
+1. Write your RMarkdown file exactly as you would for generating HTML or PDF outputs
+
+--
+
+2. Add a reference to a custom Word template to the YAML header: 
+
+```
+output:
+    word_document:
+      reference_docx: word_template.docx
+```
+
+--
+
+3. Customize the Word template to fit your needs. 
+
+*Note*: This can be a little tricky. Check out [this resource](https://stackoverflow.com/questions/29440007/changing-word-template-for-knitr-in-rmarkdown) by the author of the Knitr package.
+
+---
+
+class: inverse
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
