@@ -11,7 +11,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: center
+class: center, middle
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 library(emo)
@@ -85,11 +85,11 @@ easier for you to read this in.
 
 --
 
-#### "I can't find the file you are working on"
+#### "I think you forgot to send me beaklengths10.22.18_latest.csv"
 
 --
 
-#### "I think you forgot to send me beaklengths10.22.18_latest.csv"
+#### "I can't find the file you are working on"
 
 --
 
@@ -126,9 +126,39 @@ class: inverse
 
 ---
 
-class:inverse  
+## Quick aside
 
-## RStudio's RProjects make it easy to have clean workflows
+#### Directory = folder `r ji("open_file_folder")` 
+  
+--
+  
+#### A file's *path* tells us the string of folders we must go through to find a file `r ji("open_file_folder")` `r ji("right_arrow")` `r ji("open_file_folder")` `r ji("right_arrow")` `r ji("page_with_curl")`
+
+--
+```{r, eval = F}
+read.csv("~/Desktop/gradschool/ElephantPoopProject/poop_masses.csv")
+```
+
+--
+```{r, eval = F}
+read.csv("~/Desktop/gradschool/ElephantPoopProject/eleph_moods.csv")
+```
+```{r, eval = F}
+write.csv("~/Desktop/gradschool/ElephantPoopProject/poops-by-mood.csv")
+```
+--
+
+#### Or
+
+```{r, eval = F}
+setwd("~/Desktop/gradschool/ElephantPoopProject/")
+```
+```{r, eval = F}
+read.csv("poop_masses.csv")
+```
+---
+
+## RProjects in RStudio make it easy to have clean workflows
 --
 
 ### What they do:  

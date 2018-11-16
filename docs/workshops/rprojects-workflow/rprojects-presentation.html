@@ -19,7 +19,7 @@ class: center, middle, inverse, title-slide
 
 ---
 
-class: center
+class: center, middle
 
 
 
@@ -88,11 +88,11 @@ easier for you to read this in.
 
 --
 
-#### "I can't find the file you are working on"
+#### "I think you forgot to send me beaklengths10.22.18_latest.csv"
 
 --
 
-#### "I think you forgot to send me beaklengths10.22.18_latest.csv"
+#### "I can't find the file you are working on"
 
 --
 
@@ -129,9 +129,44 @@ class: inverse
 
 ---
 
-class:inverse  
+## Quick aside
 
-## RStudio's RProjects make it easy to have clean workflows
+#### Directory = folder 📂 
+  
+--
+  
+#### A file's *path* tells us the string of folders we must go through to find a file 📂 ➡️ 📂 ➡️ 📃
+
+--
+
+```r
+read.csv("~/Desktop/gradschool/ElephantPoopProject/poop_masses.csv")
+```
+
+--
+
+```r
+read.csv("~/Desktop/gradschool/ElephantPoopProject/eleph_moods.csv")
+```
+
+```r
+write.csv("~/Desktop/gradschool/ElephantPoopProject/poops-by-mood.csv")
+```
+--
+
+#### Or
+
+
+```r
+setwd("~/Desktop/gradschool/ElephantPoopProject/")
+```
+
+```r
+read.csv("poop_masses.csv")
+```
+---
+
+## RProjects in RStudio make it easy to have clean workflows
 --
 
 ### What they do:  
