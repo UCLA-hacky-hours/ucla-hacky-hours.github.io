@@ -31,7 +31,10 @@ pre {
 
 
 
-##  Normal project workflow
+##  Project workflows
+
+--
+### Sequence between all stages of a project from conceptualization to completion, which generates files
 
 ---
 
@@ -68,7 +71,7 @@ knitr::include_graphics("borregaard-hart.png")
 
 ### Collaborations without standardized project workflows... 
 
-
+--
 #### Emailing documents back and forth
 
 ```
@@ -84,10 +87,13 @@ easier for you to read this in.
 
 #### "I can't find the file you are working on"
 
-```{r, eval = F}
-setwd("~/Documents/grad school/ElephantPoopProject/poop_masses.csv")
-```
+--
 
+#### "I think you forgot to send me beaklengths10.22.18_latest.csv"
+
+--
+
+![](read-in-csv-error.png) 
 
 ---
 class:inverse, middle, center 
