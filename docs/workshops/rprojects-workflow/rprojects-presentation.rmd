@@ -12,9 +12,9 @@ output:
       countIncrementalSlides: false
 ---
 class: center
-
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(emo)
 ```
 
 
@@ -39,15 +39,15 @@ pre {
 
 --
 
-### 1. Research reproducibility `r emo::ji("repeat")`
+### 1. Research reproducibility `r ji("repeat")`
 
 --
-### 2. Easier collaborations `r emo::ji("fist_right")` `r emo::ji("fist_left")`
+### 2. Easier collaborations `r ji("fist_right")` `r ji("fist_left")`
 
 
 ---
 
-## 1. Research reproducibility `r emo::ji("repeat")`
+## 1. Research reproducibility `r ji("repeat")`
 
 ```{r, echo = F, out.height="200px"}
 knitr::include_graphics("borregaard-hart.png")
@@ -62,7 +62,7 @@ knitr::include_graphics("borregaard-hart.png")
 > The keys to a greater level of reproducibility in ecology are  to establish analytical protocols that are **robust and transparent**, to **faithfully document the analytical process including any failed attempts**, and to ensure that the **storage and acquisition of data is documented and includes the appropriate metadata**.
 ---
 
-## 2. Easier collaborations  `r emo::ji("fist_right")` `r emo::ji("fist_left")`
+## 2. Easier collaborations  `r ji("fist_right")` `r ji("fist_left")`
 
 --
 
@@ -92,16 +92,104 @@ setwd("~/Documents/grad school/ElephantPoopProject/poop_masses.csv")
 ---
 class:inverse, middle, center 
 
-## If these problems<sup>*</sup> sound familiar...
-
---
+## If these problems sound familiar...
 
 ### Your life will be improved with a better project workflow
 
-.pull-right[<sup>*</sup> or similar]
+---
+class: inverse
+
+## Simple rules for better workflows 
+
+--
+### 1. One project, one directory  `r ji("open_file_folder")`  (`r ji("house")`)
+
+--
+#### Within this directory, use *relative paths*
+
+--
+### 2. Clear organization of data, scripts, output, summaries, figures/tables &nbsp;&nbsp;&nbsp; `r ji("zero")` `r ji("right_arrow")` `r ji("one")` `r ji("right_arrow")` `r ji("two")`
+
+--
+### 3. Workflow backups `r ji("globe")`
+
+--
+
+*Bonus: Version control*
+ 
 
 ---
-class: inverse, middle
-## The basics: One project, One directory
 
-![](example-project-directory.png)
+class:inverse  
+
+## RStudio's RProjects make it easy to have clean workflows
+--
+
+### What they do:  
+
+#### 1. Set up a new directory (*or can be established in an existing directory*)  
+
+#### 2. Everything associated with the project can live within this directory  
+
+#### 3. Within the project, only need to use relative paths  
+
+#### 4. Easy to set up with Git for version control
+
+---
+class: center,middle 
+
+# Let's make a project!
+
+---
+
+## Recommended project organization  
+
+```
+my_project
+  |- data
+  | |- raw-data-files
+  | |- cleaned-data-files
+  |- code
+  | |- 01-clean-raw-data
+  | |- 02-run-pairwise-models
+  | |- 03-run-multivariate-models
+  | |- 04-generate-supplemental-tables
+  | |- ...
+  |- figures
+  | |- ....
+  |- tables
+  | |- ...
+  |- doc
+  | |- project-notes.Rmd
+  | |- manuscript.Rmd
+  | |- ...
+  |- ...
+```
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 1. [Directory for](https://github.com/atredennick/usses_water) for Tredennick et al. "Ecosystem functional response across precipitation extremes in a sagebrush steppe" 
+
+![](tredennick-repo.png) 
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 2. [Directory for](https://github.com/zapataf/ms_eharrisii) for Zapata & Villarroel "A new species of Escallonia (Escalloniaceae) from the inter-Andean tropical dry forests of Bolivia" 
+
+![](zapata-repo.png) 
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 3. [Directory for](https://github.com/cboettig/noise-phenomena) for Boettiger "Noise-driven phenomena in population biology " 
+
+![](boettiger-repo.png) 
+

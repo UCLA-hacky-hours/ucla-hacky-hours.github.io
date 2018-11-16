@@ -4,7 +4,7 @@
     <title>Managing workflows with RProjects and Version Control</title>
     <meta charset="utf-8">
     <meta name="author" content="Madeline Cowen" />
-    <meta name="date" content="2018-11-15" />
+    <meta name="date" content="2018-11-16" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
   </head>
@@ -15,12 +15,11 @@ class: center, middle, inverse, title-slide
 # Managing workflows with RProjects and Version Control
 ## UCLA EEB Hacky Hours
 ### Madeline Cowen
-### 2018-11-15
+### 2018-11-16
 
 ---
 
 class: center
-
 
 
 
@@ -55,7 +54,7 @@ pre {
 
 ## 1. Research reproducibility 🔁
 
-&lt;img src="borregaard-hart.png" width="2236" height="200px" /&gt;
+&lt;img src="borregaard-hart.png" height="200px" /&gt;
 
 --
 
@@ -97,19 +96,106 @@ setwd("~/Documents/grad school/ElephantPoopProject/poop_masses.csv")
 ---
 class:inverse, middle, center 
 
-## If these problems&lt;sup&gt;*&lt;/sup&gt; sound familiar...
-
---
+## If these problems sound familiar...
 
 ### Your life will be improved with a better project workflow
 
-.pull-right[&lt;sup&gt;*&lt;/sup&gt; or similar]
+---
+class: inverse
+
+## Simple rules for better workflows 
+
+--
+### 1. One project, one directory  📂  (🏠)
+
+--
+#### Within this directory, use *relative paths*
+
+--
+### 2. Clear organization of data, scripts, output, summaries, figures/tables &amp;nbsp;&amp;nbsp;&amp;nbsp; 0️⃣ ➡️ 1️⃣ ➡️ 2️⃣
+
+--
+### 3. Workflow backups 🌎
+
+--
+
+*Bonus: Version control*
+ 
 
 ---
-class: inverse, middle
-## The basics: One project, One directory
 
-![](example-project-directory.png)
+class:inverse  
+
+## RStudio's RProjects make it easy to have clean workflows
+--
+
+### What they do:  
+
+#### 1. Set up a new directory (*or can be established in an existing directory*)  
+
+#### 2. Everything associated with the project can live within this directory  
+
+#### 3. Within the project, only need to use relative paths  
+
+#### 4. Easy to set up with Git for version control
+
+---
+class: center,middle 
+
+# Let's make a project!
+
+---
+
+## Recommended project organization  
+
+```
+my_project
+  |- data
+  | |- raw-data-files
+  | |- cleaned-data-files
+  |- code
+  | |- 01-clean-raw-data
+  | |- 02-run-pairwise-models
+  | |- 03-run-multivariate-models
+  | |- 04-generate-supplemental-tables
+  | |- ...
+  |- figures
+  | |- ....
+  |- tables
+  | |- ...
+  |- doc
+  | |- project-notes.Rmd
+  | |- manuscript.Rmd
+  | |- ...
+  |- ...
+```
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 1. [Directory for](https://github.com/atredennick/usses_water) for Tredennick et al. "Ecosystem functional response across precipitation extremes in a sagebrush steppe" 
+
+![](tredennick-repo.png) 
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 2. [Directory for](https://github.com/zapataf/ms_eharrisii) for Zapata &amp; Villarroel "A new species of Escallonia (Escalloniaceae) from the inter-Andean tropical dry forests of Bolivia" 
+
+![](zapata-repo.png) 
+
+---
+class:inverse  
+
+## Real-life examples
+
+#### 3. [Directory for](https://github.com/cboettig/noise-phenomena) for Boettiger "Noise-driven phenomena in population biology " 
+
+![](boettiger-repo.png)
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
