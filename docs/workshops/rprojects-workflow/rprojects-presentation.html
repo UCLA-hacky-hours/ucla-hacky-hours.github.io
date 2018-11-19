@@ -36,10 +36,10 @@ pre {
 
 
 
-##  Project workflows
+##  Project workflow
 
 --
-### Sequence between all stages of a project from conceptualization to completion, which generates files
+### Sequence between all stages of a project from conceptualization to completion
 
 ---
 
@@ -61,11 +61,11 @@ pre {
 
 --
 
-&gt; Ecology faces particular challenges in reproducibility because  data  collection  is  often  context  dependent,  and  because  **there  are  few  established  standards  for storing metadata and facilitating study replication**.
+- Ecology faces particular challenges in reproducibility because  data  collection  is  often  context  dependent,  and  because  **there  are  few  established  standards  for storing metadata and facilitating study replication**.
 
 --
 
-&gt; The keys to a greater level of reproducibility in ecology are  to establish analytical protocols that are **robust and transparent**, to **faithfully document the analytical process including any failed attempts**, and to ensure that the **storage and acquisition of data is documented and includes the appropriate metadata**.
+- The keys to a greater level of reproducibility in ecology are  to establish analytical protocols that are **robust and transparent**, to **faithfully document the analytical process including any failed attempts**, and to ensure that the **storage and acquisition of data is documented and includes the appropriate metadata**.
 ---
 
 ## 2. Easier collaborations  🤜 🤛
@@ -120,7 +120,7 @@ class: inverse
 ### 2. Clear organization of data, scripts, output, summaries, figures/tables &amp;nbsp;&amp;nbsp;&amp;nbsp; 0️⃣ ➡️ 1️⃣ ➡️ 2️⃣
 
 --
-### 3. Workflow backups 🌏
+### 3. Workflow backups 🌎
 
 --
 
@@ -194,9 +194,11 @@ class: center,middle
 ```
 my_project
   |- data
+  | |- README.txt
   | |- raw-data-files
   | |- cleaned-data-files
   |- code
+  | |- README.txt
   | |- 01-clean-raw-data
   | |- 02-run-pairwise-models
   | |- 03-run-multivariate-models
@@ -238,7 +240,76 @@ class:inverse
 
 #### 3. [Directory for](https://github.com/cboettig/noise-phenomena) for Boettiger "Noise-driven phenomena in population biology " 
 
-![](boettiger-repo.png)
+![](boettiger-repo.png) 
+
+---
+
+## Value of RProjects
+
+- 80% of the benefits from 20% of the work  
+
+- you're already putting files somewhere, so take a few seconds to do so in a way that gives you tremendous benefits  
+
+- you can send your RProject to a collaborator and it doesn't matter where they store the directory; they won't need to change any file paths if it's all self-contained  
+
+- new session = new environment  
+
+- project philosophy = everything belonging to one project is all in one place  
+- logical connection to git  
+
+---
+class: inverse, center
+
+## Version control
+
+&lt;img src="phd-comics-final.gif" width="450px" height="540px" /&gt;
+
+---
+class: inverse
+
+## Git (images from Software Carpentry)
+
+![](carpentry_git_version_diagram.png)
+
+--
+
+![](carpentry_git_staging_diagram.png)
+
+---
+
+## Using Git in RProjects
+
+### Go to https://github.com/UCLA-hacky-hours/demo-rproject and click on "Clone or download" to download a zipped RProject
+
+--
+
+#### - add comment to the script that says "updated by [your name]"
+#### - change some variables, colors, and/or labels in the plot and generate an updated figure
+#### - commit your changes with git
+
+---
+
+## Advanced features Part 1: GitHub
+
+---
+
+## Advanced features Part 2: better package management (with packrat)
+&lt;img src="packrat-hex-sticker.png" width="400px" height="400px" /&gt;
+---
+
+## Advanced features Part 3: packages
+
+---
+
+## Workflow summary:
+
+### 1. Generate an RProject with directories for data, analyses, and summaries  
+
+### 2. Set up git and a back-up system (e.g., Dropbox, GitHub)
+
+### 3. Write well-commented R scripts that clean the data and create output  
+
+### 4. Write summaries with RMarkdown! Or at least store output in the project
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
